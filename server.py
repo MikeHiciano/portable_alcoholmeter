@@ -22,7 +22,7 @@ def response():
         name = request.json['name']
         message = request.json['message']
         bot.sendMessage(chat_id_1, '%s : %s' %(name,message))
-        time.sleep(10)
+        return jsonify({'status':'OK'})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

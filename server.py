@@ -15,14 +15,10 @@ def response_get():
 @app.route('/triggers' ,methods=['POST'])
 def response():
 
-    if not request.json:
-        abort(400)
-
-    else:
-        name = request.json['name']
-        message = request.json['message']
-        bot.sendMessage(chat_id_1, '%s : %s' %(name,message))
-        return jsonify({'status':'OK'})
+    name = request.json['name']
+    message = request.json['message']
+    bot.sendMessage(chat_id_1, '%s : %s' %(name,message))
+    return jsonify({'status':'OK'})
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)

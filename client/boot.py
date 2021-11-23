@@ -8,8 +8,8 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
-ssid = 'Mike Y7'
-password = '12345678'
+ssid = 'Z982'
+password = 'qwertyui'
 
 led = machine.Pin(2,machine.Pin.OUT)
 
